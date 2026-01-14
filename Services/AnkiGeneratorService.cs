@@ -1,9 +1,9 @@
 using OpenAI;
 using OpenAI.Chat;
-using AnkiMakerApp.Models;
+using AnkiMakerBE.Models;
 using System.Text.Json;
 
-namespace AnkiMakerApp.Services;
+namespace AnkiMakerBE.Services;
 
 public interface IAnkiGeneratorService
 {

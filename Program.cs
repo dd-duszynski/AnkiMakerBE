@@ -1,5 +1,5 @@
-using AnkiMakerApp.Models;
-using AnkiMakerApp.Services;
+using AnkiMakerBE.Models;
+using AnkiMakerBE.Services;
 using DotNetEnv;
 
 
@@ -7,8 +7,15 @@ var builder = WebApplication.CreateBuilder(args);
 
 if (builder.Environment.IsDevelopment())
 {
-    Env.Load();
+    var envPath = Path.Combine(Directory.GetCurrentDirectory(), ".env");
+    if (File.Exists(envPath))
+    {
+        Env.Load(envPath);
+    }
 }
+
+// Add environment variables to configuration
+builder.Configuration.AddEnvironmentVariables();
 
 // Dodaj CORS
 builder.Services.AddCors(options =>

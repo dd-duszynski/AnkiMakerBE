@@ -1,7 +1,7 @@
 using HtmlAgilityPack;
 using System.Text;
 
-namespace AnkiMakerApp.Services;
+namespace AnkiMakerBE.Services;
 
 public interface IContentExtractorService
 {

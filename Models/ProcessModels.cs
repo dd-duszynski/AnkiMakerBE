@@ -1,4 +1,4 @@
-namespace AnkiMakerApp.Models;
+namespace AnkiMakerBE.Models;
 
 public class ProcessUrlRequest
 {
